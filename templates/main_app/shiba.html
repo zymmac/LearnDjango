@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%  load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shibas List</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
+  </head>
+  <body>
+
+    <table>
+      <thead>
+        <th>Shiba Name</th>
+        <th>Color</th>
+        <th>Birthday</th>
+      </thead>
+      {% for shiba in shibas_list %}
+      <tr>
+        <td>{{ shiba.name}}</td>
+        <td>{{ shiba.color }}</td>
+        <td>{{ shiba.birthday }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+
+
+
+  </body>
+</html>
