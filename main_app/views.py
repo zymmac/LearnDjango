@@ -20,9 +20,9 @@ def formpage(request):
 
         if form.is_valid():
             print('Form successful!')
-            print('Shiba name is: '+form.cleaned_data[name])
-            print('Shiba birthday is: '+form.cleaned_data[birthday])
-            print('Shiba name is: '+form.cleaned_data[color])
+            print('Shiba name is: '+form.cleaned_data['name'])
+            print('Shiba birthday is: '+str(form.cleaned_data['birthday']))
+            print('Shiba color is: '+form.cleaned_data['color'])
 
     else:
         form = Shiba_form()

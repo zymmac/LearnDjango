@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('shiba/', include('main_app.urls')),
-    path('formpage/', include('main_app.urls')),
+    path('formpage/', views.formpage, name='Shiba form'),
 ]
