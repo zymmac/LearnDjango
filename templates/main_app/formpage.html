@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <meta charset="utf-8">
-    <title>Form Page</title>
-  </head>
-  <body>
-    <div class="container">
+{% extends "main_app/base.html" %}
+{% load static %}
+{% block title %}Form Page{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static '/css/mystyle.css' %}"/>
+{% endblock %}
+{% block body_block %}
       <div class="jumbotron">
         <h1>This is the Shiba Form</h1>
         <h2>Please fulfill the form!</h2>
@@ -18,5 +17,4 @@
         <input type="submit" name="" class='btn btn-primary' value="Submit">
       </form>
     </div>
-  </body>
-</html>
+{% endblock %}

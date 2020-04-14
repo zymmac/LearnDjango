@@ -22,3 +22,9 @@ h1, h2{
 .container{
   margin-top: 100px;
 }
+
+tr,td, th{
+  padding: 5px;
+  border: solid black 2px;
+  text-align: center;
+}

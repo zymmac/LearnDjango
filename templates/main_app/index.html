@@ -1,19 +1,15 @@
 <!DOCTYPE html>
+{% extends "main_app/base.html" %}
 {% load static %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Conectado</title>
-    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
-  </head>
-  <body>
+{% block title %}Shiba Home{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static '/css/mystyle.css' %}"/>
+{% endblock %}
+{% block body_block %}
+{%load static %}
+  <div class="jumbotron">
     <h1>Django Funcionando!</h1>
     <img class='center' src="{% static 'images/earthquake.jpg'%}" alt="Shiba missing!">
-    <ol>
-      <li><a href="/formpage">Form</a></li>
-      <li><a href="/shiba">Data</a></li>
-    </ol>
+  </div>
 
-
-  </body>
-</html>
+{% endblock %}

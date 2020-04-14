@@ -1,13 +1,12 @@
 <!DOCTYPE html>
+{% extends "main_app/base.html" %}
+{% load static %}
+{% block title %}Members{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static '/css/tablestyle.css' %}"/>
+{% endblock %}
+{% block body_block %}
 {%  load static %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Shibas List</title>
-    <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
-  </head>
-  <body>
-
     <table>
       <thead>
         <th>Shiba Name</th>
@@ -23,7 +22,4 @@
     {% endfor %}
     </table>
 
-
-
-  </body>
-</html>
+{% endblock %}
