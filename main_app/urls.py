@@ -5,6 +5,6 @@ from main_app import views
 app_name = 'main_app'
 
 urlpatterns = [
-    path('shiba/', views.shiba, name='shiba'),
+    path('', views.shiba, name='shiba'),
     path('form/', views.formpage, name='form')
 ]

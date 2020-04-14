@@ -22,3 +22,12 @@ h1, h2{
 .container{
   margin-top: 100px;
 }
+
+.navbar{
+  background-color: #F6711A;
+}
+
+input.btn{
+  background-color: #F6711A;
+  color: white;
+}

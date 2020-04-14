@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from main_app.models import Shiba
-from main_app.forms import Shiba_form
+from main_app.forms import ShibaForm
 
 # Create your views here.
 def index(request):
@@ -16,15 +16,15 @@ def shiba(request):
 def formpage(request):
 
     if request.method == 'POST':
-        form = Shiba_form(request.POST)
+        form = ShibaForm(request.POST)
 
         if form.is_valid():
-            print('Form successful!')
-            print('Shiba name is: '+form.cleaned_data['name'])
-            print('Shiba birthday is: '+str(form.cleaned_data['birthday']))
-            print('Shiba color is: '+form.cleaned_data['color'])
+            form.save(commit=True)
+            return shiba(request)
+        else:
+            print('ERROR FORM INVALID')
 
     else:
-        form = Shiba_form()
+        form = ShibaForm()
 
     return render(request, 'main_app/formpage.html', context={'forms':form})
